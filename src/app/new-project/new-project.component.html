@@ -1,3 +1,40 @@
-<p>
-  new-project works!
-</p>
+<h3>Add a new project to fund</h3>
+<div>
+  <div>
+    <label>Project Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+
+  <div>
+    <label>Your Name/Organization Name:</label>
+    <br>
+    <input #newStarter>
+  </div>
+
+  <div>
+    <label>Project Description:</label>
+    <br>
+    <textarea #newDescription></textarea>
+  </div>
+  <div>
+    <label>Project Type:</label>
+    <br>
+    <select #newType>
+      <option value=""></option>
+      <option value="music">Music</option>
+      <option value="art">Art</option>
+      <option value="games">Games</option>
+      <option value="tech">Tech</option>
+      <option value="film">Film</option>
+    </select>
+  </div>
+  <div>
+    <label>Funding Goal:</label>
+    <br>
+    <input type="number" #newGoal>
+  </div>
+  <br>
+  <button class="btn btn-danger" (click)="submitForm(newType.value, newTitle.value, newDescription.value, newStarter.value,   newGoal.value); newTitle.value=''; newDescription.value=''; newStarter.value=''; newType.value=''; newGoal.value=''">Add</button>
+
+</div>
