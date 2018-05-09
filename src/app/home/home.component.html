@@ -2,6 +2,13 @@
   <h1>Welcome to {{ title }}!</h1>
   <h4>All Crowdfunding projects</h4>
 </div>
-<ol>
-  <li *ngFor="let project of projects | async" (click)="goToDetailPage(project)"><h5>{{project.title}}</h5></li>
-</ol>
+
+<div *ngFor="let project of projects | async"   class="card">
+  <div class="card-body">
+    <h5 (click)="goToDetailPage(project)">{{project.title}}</h5>
+    <div *ngIf="currentRoute === '/admin'">
+      <hr>
+      <app-edit-project [selectedProject]="project"></app-edit-project>
+    </div>
+  </div>
+</div>

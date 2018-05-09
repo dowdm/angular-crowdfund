@@ -1,3 +1,29 @@
-<p>
-  edit-project works!
-</p>
+<h4>Edit Project</h4>
+
+<label>New Project Title:</label>
+<input [(ngModel)]="selectedProject.title">
+<br>
+
+<label>New Project Starter:</label>
+<input [(ngModel)]="selectedProject.starter">
+<br>
+
+<label>New Project Description:</label>
+<input [(ngModel)]="selectedProject.description">
+<br>
+
+<label>New Project Type:</label>
+<select [(ngModel)]="selectedProject.type">
+  <option [value]=""></option>
+  <option [value]="music">Music</option>
+  <option [value]="art">Art</option>
+  <option [value]="games">Games</option>
+  <option [value]="tech">Tech</option>
+  <option [value]="film">Film</option>
+</select>
+<br>
+
+<label>New Project Goal:</label>
+<input [(ngModel)]="selectedProject.goal">
+<br>
+<button class="btn btn-danger" (click)="beginUpdatingProject(selectedProject)">Update</button>

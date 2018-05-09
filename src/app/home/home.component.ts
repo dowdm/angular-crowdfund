@@ -12,6 +12,9 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class HomeComponent implements OnInit {
   title = 'CrowdFund';
+  
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router, private projectService: ProjectService) { }
 
   projects: FirebaseListObservable<any[]>;
