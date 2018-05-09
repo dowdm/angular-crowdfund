@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Project } from '../project.model';
@@ -12,6 +12,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   providers: [ProjectService]
 })
 export class ProjectDetailComponent implements OnInit {
+  @Input() selectedProject;
   projectId: string;
   projectToDisplay;
 
@@ -25,7 +26,14 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.projectId = urlParameters['id'];
   });
-  this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+  this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
+    this.projectToDisplay = dataLastEmittedFromObserver;
+
+    })
   }
+
+  fundProject(projectToFund, funds){
+      this.projectService.addProjectFunding(projectToFund, funds);
+    }
 
 }

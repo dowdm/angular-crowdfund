@@ -1,7 +1,11 @@
 <div>
-  <h3><em>{{(projectToDisplay | async)?.type}}</em></h3>
-  <h2>{{(projectToDisplay | async)?.title}}</h2>
-  <h4>{{(projectToDisplay | async)?.description}}</h4>
-  <h6>Started by: {{(projectToDisplay | async)?.starter}}</h6>
-  <p>Funded ${{(projectToDisplay | async)?.currentFunding}} out of ${{(projectToDisplay | async)?.goal}}</p>
+  <h3><em>{{projectToDisplay?.type}}</em></h3>
+  <h2>{{projectToDisplay?.title}}</h2>
+  <h4>{{projectToDisplay?.description}}</h4>
+  <h6>Started by: {{projectToDisplay?.starter}}</h6>
+  <p>Funded ${{projectToDisplay?.currentFunding}} out of ${{projectToDisplay?.goal}}</p>
+  <br>
+
+  <input type="number" #funds>
+  <button class="btn btn-danger" (click)="fundProject(projectToDisplay, funds.value); funds.value=''">Fund!</button>
 </div>

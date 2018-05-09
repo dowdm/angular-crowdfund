@@ -11,3 +11,7 @@ h5:hover{
   cursor: pointer;
   color: blue;
 }
+
+.container{
+  margin-bottom: 70px;
+}

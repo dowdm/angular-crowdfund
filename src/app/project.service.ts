@@ -28,4 +28,14 @@ export class ProjectService {
     description: localUpdatedProject.description, goal: localUpdatedProject.goal, type: localUpdatedProject.type});
   }
 
+  deleteProject(localProjectToDelete){
+    var projectEntryInFirebase = this.getProjectById(localProjectToDelete.$key);
+    projectEntryInFirebase.remove();
+  }
+
+  addProjectFunding(localProjectToFund, funds){
+    var projectEntryInFirebase = this.getProjectById(localProjectToFund.$key);
+    projectEntryInFirebase.update({currentFunding: localProjectToFund.currentFunding += parseInt(funds)});
+
+  }
 }
