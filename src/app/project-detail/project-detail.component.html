@@ -1,0 +1,7 @@
+<div>
+  <h3><em>{{(projectToDisplay | async)?.type}}</em></h3>
+  <h2>{{(projectToDisplay | async)?.title}}</h2>
+  <h4>{{(projectToDisplay | async)?.description}}</h4>
+  <h6>Started by: {{(projectToDisplay | async)?.starter}}</h6>
+  <p>Funded ${{(projectToDisplay | async)?.currentFunding}} out of ${{(projectToDisplay | async)?.goal}}</p>
+</div>

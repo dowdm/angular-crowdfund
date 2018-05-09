@@ -1,0 +1,33 @@
+{ "projects": [{
+    "type": "film",
+    "title": "Stormy Daniels Biopic",
+    "description": "An overview of a contemporary star. ",
+    "starter": "Donald Trump",
+    "goal": 10000,
+    "currentFunding": 0
+  }, {
+    "type": "music",
+    "title": "Marimba Party",
+    "description": "A medley of cool marimba tunes",
+    "starter": "Marimaba All-Stars",
+    "goal": 4000,
+    "currentFunding": 0
+
+  }, {
+  "type": "tech",
+  "title": "webpacks update advisor",
+  "description": "A tool that updates your webpacks to future releases that aren't released.",
+  "starter": "Epicodus tha God",
+  "goal": 2000,
+  "currentFunding": 0
+
+  },{
+  "type": "art",
+  "title": "Pants for Fish",
+  "description": "Even though they don't have legs, fish need pants too. It's a choice.",
+  "starter": "Kanye West",
+  "goal": 200000,
+  "currentFunding": 0
+
+  }]
+}

@@ -1,0 +1,8 @@
+<h4>All Film Projects:</h4>
+<ul *ngFor="let project of projects | async">
+  <div *ngIf="project.type === 'film'">
+    <li>
+      <h5 (click)="goToDetailPage(project)">{{project.title}}</h5>
+    </li>
+  </div>
+</ul>

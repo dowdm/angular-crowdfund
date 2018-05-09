@@ -1,0 +1,7 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+  <h4>All Crowdfunding projects</h4>
+</div>
+<ol>
+  <li *ngFor="let project of projects | async" (click)="goToDetailPage(project)"><h5>{{project.title}}</h5></li>
+</ol>
