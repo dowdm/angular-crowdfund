@@ -8,6 +8,15 @@
   <a routerLink="film">Film</a>
   <a routerLink="tech">Tech</a>
   <a routerLink="new">New Project</a>
+  <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="isLoggedIn">
+        <a>{{userName}}</a>
+        <a (click)="logout()">Log Out</a>
+      </li>
+      <li *ngIf ="!isLoggedIn">
+        <a (click)="login()">Log In</a>
+      </li>
+    </ul>
 </nav>
 
 <div class="container">
